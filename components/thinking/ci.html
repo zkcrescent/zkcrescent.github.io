@@ -7,12 +7,12 @@
     <meta name="description" content="一个莫得感情的代码工具人">
     
     
-    <link rel="preload" href="/assets/css/0.styles.5ba0d270.css" as="style"><link rel="preload" href="/assets/js/app.629ec830.js" as="script"><link rel="preload" href="/assets/js/2.6d9f343b.js" as="script"><link rel="preload" href="/assets/js/11.bdae536e.js" as="script"><link rel="prefetch" href="/assets/js/10.dc95de34.js"><link rel="prefetch" href="/assets/js/12.c6347234.js"><link rel="prefetch" href="/assets/js/13.823af8cf.js"><link rel="prefetch" href="/assets/js/3.814f06c8.js"><link rel="prefetch" href="/assets/js/4.6ddf94dd.js"><link rel="prefetch" href="/assets/js/5.b48156f8.js"><link rel="prefetch" href="/assets/js/6.edab2741.js"><link rel="prefetch" href="/assets/js/7.632a03a6.js"><link rel="prefetch" href="/assets/js/8.78ff9446.js"><link rel="prefetch" href="/assets/js/9.e5ff6653.js">
+    <link rel="preload" href="/assets/css/0.styles.5ba0d270.css" as="style"><link rel="preload" href="/assets/js/app.8832504e.js" as="script"><link rel="preload" href="/assets/js/2.6d9f343b.js" as="script"><link rel="preload" href="/assets/js/15.65d8d3b2.js" as="script"><link rel="prefetch" href="/assets/js/10.fcfb9fcf.js"><link rel="prefetch" href="/assets/js/11.b4ec4d06.js"><link rel="prefetch" href="/assets/js/12.15ffcb47.js"><link rel="prefetch" href="/assets/js/13.ba04d6ce.js"><link rel="prefetch" href="/assets/js/14.5ebceaea.js"><link rel="prefetch" href="/assets/js/16.b03e9142.js"><link rel="prefetch" href="/assets/js/17.8200f440.js"><link rel="prefetch" href="/assets/js/3.814f06c8.js"><link rel="prefetch" href="/assets/js/4.be4bdcc6.js"><link rel="prefetch" href="/assets/js/5.e56a1207.js"><link rel="prefetch" href="/assets/js/6.d8195aeb.js"><link rel="prefetch" href="/assets/js/7.d974031e.js"><link rel="prefetch" href="/assets/js/8.caaad844.js"><link rel="prefetch" href="/assets/js/9.860d0eaf.js">
     <link rel="stylesheet" href="/assets/css/0.styles.5ba0d270.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div><div class="theme-container vuepress-theme-simple"><header class="header"><a href="/" title="一个莫得感情的代码工具人" class="site-name router-link-active">zkcrescent 的木屋</a><div style="clear: both"></div><div class="navbar"><span><a href="/components/technic/golang/main.html" class="navbar-item">GoLang 相关</a><!----></span><span><a href="/components/technic/os/main.html" class="navbar-item">OS 相关</a><!----></span><span><a href="/components/technic/link.html" class="navbar-item">知识链接</a><!----></span><span><a href="/intro.html" class="navbar-item">关于</a><!----></span></div></header><section class="post-view"><div class="post-head"><h1 class="post-title">一些关于云 CI, CD 的思考</h1><time datetime="9/9/2019" title="9/9/2019" pubdate="pubdate" class="post-date">
-  1 minute ago
+  1 week ago
 </time></div><div class="content__default"><h2 id="一些关于云-ci-cd-的思考"><a href="#一些关于云-ci-cd-的思考" aria-hidden="true" class="header-anchor">#</a> 一些关于云 CI, CD 的思考</h2> <p>如果是像 cloud9 那样提供一个平台，用户不关心后面的整套编译过程，只需要无情的编写代码然后 PUSH，那么存在以下一些问题:</p> <ul><li>怎么生成最终的发布产物? (定义编译文件？（定义这个其实已经在关心自己的编译过程了） 规定主函数入口固定某个文件？</li> <li>用户的依赖文件，依赖库如何保证？（提供官方仓库？（各种语言支持？，还是提供git 仓库所有依赖一起打包？，如果是，那么是否应该有cache绑定？）</li> <li>CI部分可以动态扩缩，CD部分可以统一页面管理</li></ul> <p>感觉应该是默认用法时（即不提供配置时），系统提供语言的标准模板，通过检索语言类型或者默认语言编译入口文件是否存在来做默认编译过程</p> <p>CI, CD 应当作为两大组件，不需要联合使用，可以单独使用，方便一些用户组自定义使用方式，比如使用自有git 仓库等</p> <p>CI, CD 拥有扩缩能力，可以方便的提供大小体量的公司应用，同时可以提供自动扩缩功能，节约成本</p> <p>页面问题</p> <p>目前最大的感受是，当用户知道一个主页，点开后却不知道应该干嘛，总是尝试性的去点击页面上的按钮，没有明确方向</p></div><div class="list-item"><div class="divider"></div><div class="post-footer">&lt;- back</div><div class="post-footer">&lt;- back to home</div></div></section><footer class="footer">
   © 2019
   <!---->
@@ -22,6 +22,6 @@
   <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">VuePress</a>
   | Theme, Customized from
   <a href="https://github.com/viko16/vuepress-theme-simple" rel="noopener" target="_blank">Simple</a></footer></div><!----></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.629ec830.js" defer></script><script src="/assets/js/2.6d9f343b.js" defer></script><script src="/assets/js/11.bdae536e.js" defer></script>
+    <script src="/assets/js/app.8832504e.js" defer></script><script src="/assets/js/2.6d9f343b.js" defer></script><script src="/assets/js/15.65d8d3b2.js" defer></script>
   </body>
 </html>
