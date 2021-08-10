@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>普罗米修斯 alert manager | zkcrescent 的木屋</title>
+    <meta name="description" content="一个莫得感情的代码工具人">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.5ba0d270.css" as="style"><link rel="preload" href="/assets/js/app.d08f3d44.js" as="script"><link rel="preload" href="/assets/js/2.6d9f343b.js" as="script"><link rel="preload" href="/assets/js/21.cc2963a3.js" as="script"><link rel="prefetch" href="/assets/js/10.3bbecd87.js"><link rel="prefetch" href="/assets/js/11.487618fe.js"><link rel="prefetch" href="/assets/js/12.200c642d.js"><link rel="prefetch" href="/assets/js/13.ae3ee37f.js"><link rel="prefetch" href="/assets/js/14.85241ba4.js"><link rel="prefetch" href="/assets/js/15.a2e85adf.js"><link rel="prefetch" href="/assets/js/16.578f7787.js"><link rel="prefetch" href="/assets/js/17.04a01f44.js"><link rel="prefetch" href="/assets/js/18.1aa516f3.js"><link rel="prefetch" href="/assets/js/19.943b43ad.js"><link rel="prefetch" href="/assets/js/20.39e01331.js"><link rel="prefetch" href="/assets/js/22.a353e419.js"><link rel="prefetch" href="/assets/js/23.700eb580.js"><link rel="prefetch" href="/assets/js/24.84ca5a80.js"><link rel="prefetch" href="/assets/js/25.f91b3b4c.js"><link rel="prefetch" href="/assets/js/3.814f06c8.js"><link rel="prefetch" href="/assets/js/4.22c92981.js"><link rel="prefetch" href="/assets/js/5.b1ba64d5.js"><link rel="prefetch" href="/assets/js/6.02609707.js"><link rel="prefetch" href="/assets/js/7.8fa0efca.js"><link rel="prefetch" href="/assets/js/8.4c81744d.js"><link rel="prefetch" href="/assets/js/9.322c0ae1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5ba0d270.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container vuepress-theme-simple"><header class="header"><a href="/" title="一个莫得感情的代码工具人" class="site-name router-link-active">zkcrescent 的木屋</a><div style="clear: both"></div><div class="navbar"><span><a href="/components/technic/golang/main.html" class="navbar-item">GoLang 相关</a><!----></span><span><a href="/components/technic/os/main.html" class="navbar-item">OS 相关</a><!----></span><span><a href="/components/technic/store/main.html" class="navbar-item">存储相关</a><!----></span><span><a href="/components/technic/link.html" class="navbar-item">知识链接</a><!----></span><span><a href="/intro.html" class="navbar-item">关于</a><!----></span></div></header><section class="post-view"><div class="post-head"><h1 class="post-title">普罗米修斯 alert manager</h1><time datetime="8/10/2021" title="8/10/2021" pubdate="pubdate" class="post-date">
+  1 minute ago
+</time></div><div class="content__default"><h2 id="普罗米修斯-alert-manager"><a href="#普罗米修斯-alert-manager" aria-hidden="true" class="header-anchor">#</a> 普罗米修斯 alert manager</h2> <p>overview: 主要能力是管理从 client app 中，比如普罗米修斯 server, 送出的alerts， 包括，安静报警，限制性报警，聚合报警或者送到其他的告警处，比如email, on-call，pagerDuty, opsGenie(报警系统)</p> <p>It's important not to load balance traffic between Prometheus and its Alertmanagers, but instead, point Prometheus to a list of all Alertmanagers.</p> <h3 id="概念"><a href="#概念" aria-hidden="true" class="header-anchor">#</a> 概念</h3> <ul><li>Group</li></ul> <p>将报警分组，同一组报警在某个时间点会聚合同group报警，仅发送一个</p> <ul><li>Inhibition</li></ul> <p>同 alert 仅会出现一次s</p> <ul><li>Silence</li></ul> <p>通过 match labels 决定是否 silence</p> <ul><li>可以通过 API 触发alert</li></ul> <p>意味着可以做集成（同时也意味着需要了解ALERT manager的处理逻辑，在做发送alert的时候需要做一些处理）</p> <h3 id="配置"><a href="#配置" aria-hidden="true" class="header-anchor">#</a> 配置</h3> <p>cmd 控制不可变更 参数， configeration 可以控制动态参数，通过 <code>POST /-/reload</code> 或者发送系统信号 <code>SIGHUP</code> 更新</p> <p>可以配置一个 smtp 服务，SLACK 推送</p> <h3 id="route"><a href="#route" aria-hidden="true" class="header-anchor">#</a> ROUTE</h3> <p>alert 选择器，alert通过匹配 route决定是否match 该规则</p> <p>inhibit_rule , 当存在<code>resource match</code>时，<code>target match</code>将会被mute, 且两者的<code>label equal</code></p></div><div class="list-item"><div class="divider"></div><div class="post-footer">&lt;- back</div><div class="post-footer">&lt;- back to home</div></div></section><footer class="footer">
+  © 2021
+  <!---->
+  
+  <br>
+  Powered by
+  <a href="https://vuepress.vuejs.org/" rel="noopener" target="_blank">VuePress</a>
+  | Theme, Customized from
+  <a href="https://github.com/viko16/vuepress-theme-simple" rel="noopener" target="_blank">Simple</a></footer></div><!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d08f3d44.js" defer></script><script src="/assets/js/2.6d9f343b.js" defer></script><script src="/assets/js/21.cc2963a3.js" defer></script>
+  </body>
+</html>
